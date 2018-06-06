@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bridge_model", "Bridge_model\Bridge_model.vcxproj", "{745C5BBE-CFE0-4AD7-B474-14DDA29CDCC6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{745C5BBE-CFE0-4AD7-B474-14DDA29CDCC6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{745C5BBE-CFE0-4AD7-B474-14DDA29CDCC6}.Debug|Win32.Build.0 = Debug|Win32
+		{745C5BBE-CFE0-4AD7-B474-14DDA29CDCC6}.Release|Win32.ActiveCfg = Release|Win32
+		{745C5BBE-CFE0-4AD7-B474-14DDA29CDCC6}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
