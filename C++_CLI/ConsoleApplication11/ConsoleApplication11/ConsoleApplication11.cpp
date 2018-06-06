@@ -55,7 +55,7 @@ int main(array<System::String ^> ^args)
 	// Generate random element values
 	Random^ generator = gcnew Random;
 	for (int i = 0; i < samples->Length; i++)
-		samples[i] = 100.0*generator->NextDouble();
+		samples[i] = 100.0 * generator->NextDouble();
 
 	// Output the samples
 	Console::WriteLine();
