@@ -1,0 +1,28 @@
+#include"stdio.h"
+int strcmp(char *s1,char *s2)
+{
+	int i;
+	for(i=0;s1[i]==s2[i];i++)
+	{if(s1[i]=='\0'&&s2[i]=='\0')
+			return 0;}
+	if(s1[i]>s2[i])
+		return 1;
+	else if(s1[i]<s2[i])
+		return -1;
+}
+void main()
+{
+	char s1[50],s2[50];
+	int num;
+	printf("input the s1:");
+	gets(s1);
+	printf("input the s2:");
+	gets(s2);
+	num=strcmp(s1,s2);
+	switch(num)
+	{
+	case 0:printf("s1==s2\n");break;
+	case 1:printf("s1>s2\n");break;
+	case -1:printf("s1<s2\n");break;
+	}
+}
