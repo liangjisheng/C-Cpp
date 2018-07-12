@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "0602Active1", "0602Active1\0602Active1.vcxproj", "{BDB49A32-5A04-418D-B483-58193CA0C537}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "call", "call\call.vcxproj", "{17AD8FCA-A212-44BE-AC47-C3053EE60D85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDB49A32-5A04-418D-B483-58193CA0C537}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BDB49A32-5A04-418D-B483-58193CA0C537}.Debug|Win32.Build.0 = Debug|Win32
+		{BDB49A32-5A04-418D-B483-58193CA0C537}.Release|Win32.ActiveCfg = Release|Win32
+		{BDB49A32-5A04-418D-B483-58193CA0C537}.Release|Win32.Build.0 = Release|Win32
+		{17AD8FCA-A212-44BE-AC47-C3053EE60D85}.Debug|Win32.ActiveCfg = Debug|Win32
+		{17AD8FCA-A212-44BE-AC47-C3053EE60D85}.Debug|Win32.Build.0 = Debug|Win32
+		{17AD8FCA-A212-44BE-AC47-C3053EE60D85}.Release|Win32.ActiveCfg = Release|Win32
+		{17AD8FCA-A212-44BE-AC47-C3053EE60D85}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

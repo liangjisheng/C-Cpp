@@ -1,0 +1,52 @@
+// My0602Active1.idl : type library source for ActiveX Control project.
+
+// This file will be processed by the MIDL compiler tool to
+// produce the type library (My0602Active1.tlb) that will become a resource in
+// 0602Active1.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(77B660CE-F293-4325-B0BE-C882B4A07CED), version(1.0),
+  control ]
+library My0602Active1Lib
+{
+	importlib(STDOLE_TLB);
+
+	//  Primary dispatch interface for CMy0602Active1Ctrl
+	[ 
+		uuid(09569208-5136-4866-97DE-4DE989FE1517)	
+	]
+	dispinterface _DMy0602Active1
+	{
+		properties:
+		methods:
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+			[id(1)] BSTR GetLiveHeadPath(void);
+	};
+
+	//  Event dispatch interface for CMy0602Active1Ctrl
+
+	[ 
+		uuid(CAB606D9-CE9E-49CD-B4A5-67B7B7D909B0)	
+	]
+	dispinterface _DMy0602Active1Events
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+	};
+
+	//  Class information for CMy0602Active1Ctrl
+	[
+		uuid(8AE0ABE5-47AF-401F-A841-F2716A65DBC2)
+	]
+	coclass My0602Active1
+	{
+		[default] dispinterface _DMy0602Active1;
+		[default, source] dispinterface _DMy0602Active1Events;
+	};
+
+};

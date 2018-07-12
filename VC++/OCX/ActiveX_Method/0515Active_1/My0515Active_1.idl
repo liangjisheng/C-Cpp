@@ -1,0 +1,56 @@
+// My0515Active_1.idl : type library source for ActiveX Control project.
+
+// This file will be processed by the MIDL compiler tool to
+// produce the type library (My0515Active_1.tlb) that will become a resource in
+// 0515Active_1.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(EC724B27-9859-4CDB-BFB3-508E00D73066), version(1.0),
+  control ]
+library My0515Active_1Lib
+{
+	importlib(STDOLE_TLB);
+
+	//  Primary dispatch interface for CMy0515Active_1Ctrl
+	[ 
+		uuid(C4892E4A-59BA-48E1-BF43-8EBAA435A069)	
+	]
+	dispinterface _DMy0515Active_1
+	{
+		properties:
+			[id(2) ] DOUBLE dNum1;
+			[id(3) ] DOUBLE dNum2;
+	methods:
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+			[id(DISPID_DOCLICK)] void DoClick(void);
+			[id(1)] DOUBLE Add(DOUBLE dNum1, DOUBLE dNum2);
+	};
+
+	//  Event dispatch interface for CMy0515Active_1Ctrl
+
+	[ 
+		uuid(0558ABAD-EC6B-42D0-BDF2-0DA8FA03F5D0)	
+	]
+	dispinterface _DMy0515Active_1Events
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			[id(DISPID_CLICK)] void Click(void);
+	};
+
+	//  Class information for CMy0515Active_1Ctrl
+	[
+		uuid(4E29832B-7197-4B2D-91F5-1DC449ED1E85)
+	]
+	coclass My0515Active_1
+	{
+		[default] dispinterface _DMy0515Active_1;
+		[default, source] dispinterface _DMy0515Active_1Events;
+	};
+
+};
