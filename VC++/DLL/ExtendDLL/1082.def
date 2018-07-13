@@ -1,0 +1,7 @@
+; 1082.def : Declares the module parameters for the DLL.
+
+LIBRARY      "1082"
+DESCRIPTION  '1082 Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here

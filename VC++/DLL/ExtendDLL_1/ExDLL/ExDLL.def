@@ -1,0 +1,6 @@
+; ExDLL.def : Declares the module parameters for the DLL.
+
+LIBRARY      "ExDLL"
+
+EXPORTS
+    ; Explicit exports can go here

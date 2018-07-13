@@ -1,0 +1,7 @@
+; 1096.def : Declares the module parameters for the DLL.
+
+LIBRARY      "1096"
+DESCRIPTION  '1096 Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here

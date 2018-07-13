@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestExDLL", "TestExDLL\TestExDLL.vcxproj", "{380A5D1B-5EF8-4471-BB5D-9BFFEE87EAE0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExDLL", "ExDLL\ExDLL.vcxproj", "{2FD9B596-7F27-496B-968C-4C5C49CD073F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{380A5D1B-5EF8-4471-BB5D-9BFFEE87EAE0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{380A5D1B-5EF8-4471-BB5D-9BFFEE87EAE0}.Debug|Win32.Build.0 = Debug|Win32
+		{380A5D1B-5EF8-4471-BB5D-9BFFEE87EAE0}.Release|Win32.ActiveCfg = Release|Win32
+		{380A5D1B-5EF8-4471-BB5D-9BFFEE87EAE0}.Release|Win32.Build.0 = Release|Win32
+		{2FD9B596-7F27-496B-968C-4C5C49CD073F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2FD9B596-7F27-496B-968C-4C5C49CD073F}.Debug|Win32.Build.0 = Debug|Win32
+		{2FD9B596-7F27-496B-968C-4C5C49CD073F}.Release|Win32.ActiveCfg = Release|Win32
+		{2FD9B596-7F27-496B-968C-4C5C49CD073F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

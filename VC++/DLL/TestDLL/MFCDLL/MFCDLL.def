@@ -1,0 +1,8 @@
+; MFCDLL.def : Declares the module parameters for the DLL.
+
+LIBRARY      "MFCDLL"
+
+EXPORTS
+    ; Explicit exports can go here
+ShowDlg @2
+nDllValue DATA
