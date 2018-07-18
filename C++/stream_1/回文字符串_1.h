@@ -1,7 +1,7 @@
-// ÅĞ¶ÏÒ»×Ö·û´®ÊÂÊÇ·ñÎÊ»ØÎÄ
+// åˆ¤æ–­ä¸€å­—ç¬¦ä¸²äº‹æ˜¯å¦é—®å›æ–‡
 int func(char* p)
 {
-	if(p==NULL) return -1;	// ¿ÕÖµ·µ»Ø-1
+	if(p==NULL) return -1;	// ç©ºå€¼è¿”å›-1
 	else {
 		int len=strlen(p)-1;
 		char *q=p+len;

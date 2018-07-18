@@ -8,7 +8,7 @@
 using namespace std;
 
 /************************************************************************/
-/*	²éÕÒÒ»¸ö×Ö·ûÔÚÒ»¸ö×Ö·û´®ÖĞµÚn´Î³öÏÖµÄÎ»ÖÃ
+/*	æŸ¥æ‰¾ä¸€ä¸ªå­—ç¬¦åœ¨ä¸€ä¸ªå­—ç¬¦ä¸²ä¸­ç¬¬næ¬¡å‡ºç°çš„ä½ç½®
 	first parameter str: source string
 	second parameter c: find char
 	third parameter n: Nst show
@@ -48,7 +48,7 @@ int FindNstPosition(const char* str, char c, int n)
 
 
 /************************************************************************/
-/*	ÒÔÖ¸¶¨µÄ·Ö¸î·û·Ö¸î×Ö·û´®£¬²¢½«·Ö¸îºóµÄ×Ö·û´®·Åµ½vector<string>ÖĞ
+/*	ä»¥æŒ‡å®šçš„åˆ†å‰²ç¬¦åˆ†å‰²å­—ç¬¦ä¸²ï¼Œå¹¶å°†åˆ†å‰²åçš„å­—ç¬¦ä¸²æ”¾åˆ°vector<string>ä¸­
 	src: source string
 	separator : separator string
 	dest : dest vector string

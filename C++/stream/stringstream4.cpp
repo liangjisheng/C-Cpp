@@ -17,7 +17,7 @@ int main()
 	iss.str("1534");
 	iss>>a;
 	cout<<a<<endl;
-	//ÓÃC²âÊÔ×ª»»
+	//ç”¨Cæµ‹è¯•è½¬æ¢
 	printf("%d\n",a);
 	
 	ostringstream oss;
@@ -26,7 +26,7 @@ int main()
 	string strFromInt;
 	string strFromDouble;
 	
-	//Êä³ö×Ö·û´®
+	//è¾“å‡ºå­—ç¬¦ä¸²
 	ostr1="My ";
 	ostr2="Name's ";
 	ostr3="Steve";
@@ -36,19 +36,19 @@ int main()
 	cout<<oss.str()<<endl;
 	ostr=oss.str(); 
 	cout<<ostr<<endl;
-	//int ×ª»¯Îªstring
+	//int è½¬åŒ–ä¸ºstring
 	oss.str("");
 	oss<<23412;
 	strFromInt=oss.str();
     cout<<strFromInt<<endl;
-	//double ×ª»¯Îªstring
+	//double è½¬åŒ–ä¸ºstring
 	oss.str("");
 	oss<<1.2345;
 	strFromDouble=oss.str();
 	cout<<strFromDouble<<endl;
 	
-	//½«stringĞÍ¸³¸øcharĞÍ¡£¹Ø¼ü£ºc_strº¯ÊıµÄ·µ»ØÖµÊÇconst char*µÄ£¬
-	// ²»ÄÜÖ±½Ó¸³Öµ¸øchar*,±ØĞë¸³¸øconst char*
+	//å°†stringå‹èµ‹ç»™charå‹ã€‚å…³é”®ï¼šc_strå‡½æ•°çš„è¿”å›å€¼æ˜¯const char*çš„ï¼Œ
+	// ä¸èƒ½ç›´æ¥èµ‹å€¼ç»™char*,å¿…é¡»èµ‹ç»™const char*
 	const char *I=strFromInt.c_str();
 	const char *D=strFromDouble.c_str();
 	printf("%s,%s\n",I,D);

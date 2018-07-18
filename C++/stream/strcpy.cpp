@@ -12,7 +12,7 @@
 }*/
 
 /*int main() {
-	// ½«Ò»¸ö´®ÓëÁíÒ»¸ö´®±È½Ï£¬Çø·Ö´óĞ¡Ğ´
+	// å°†ä¸€ä¸ªä¸²ä¸å¦ä¸€ä¸ªä¸²æ¯”è¾ƒï¼ŒåŒºåˆ†å¤§å°å†™
 	char *buf1="aaa",*buf2="bbb",*buf3="ccc";
 	int ptr;
 	ptr=strcmp(buf2,buf1);
@@ -29,7 +29,7 @@
 }*/
 
 /*int main() {
-	// ½«Ò»¸ö´®ÓëÁíÒ»¸ö´®±È½Ï£¬²»Çø·Ö´óĞ¡Ğ´
+	// å°†ä¸€ä¸ªä¸²ä¸å¦ä¸€ä¸ªä¸²æ¯”è¾ƒï¼Œä¸åŒºåˆ†å¤§å°å†™
 	char *buf1="BBB",*buf2="bbb";
 	int ptr=strcmpi(buf2,buf1);
 	if(ptr>0) printf("buffer2 is bigger than buffer1\n");
@@ -39,7 +39,7 @@
 }*/
 
 /*int main() {
-	// ÔÚ´®ÖĞ²éÕÒµÚÒ»¸ö¸ø¶¨µÄ×Ö·û¼¯ÄÚÈİµÄ¶Î
+	// åœ¨ä¸²ä¸­æŸ¥æ‰¾ç¬¬ä¸€ä¸ªç»™å®šçš„å­—ç¬¦é›†å†…å®¹çš„æ®µ
 	char *str1="1234567890",*str2="747DC8";
 	int length=strcspn(str1,str2);
 	printf("Character where str intersect is at position %d\n",length);
@@ -47,7 +47,7 @@
 }*/
 
 /*int main() {
-	// ½«´®¿½±´µ½ĞÂ½¨µÄÎ»ÖÃ´¦
+	// å°†ä¸²æ‹·è´åˆ°æ–°å»ºçš„ä½ç½®å¤„
 	char *str1,*str2="abcde";
 	str1=strdup(str2);
 	printf("%s\n",str1);
@@ -55,10 +55,10 @@
 	return 0;
 }*/
 
-// stricmp ²»Çø·Ö´óĞ¡Ğ´±È½ÏÁ½¸ö´®
+// stricmp ä¸åŒºåˆ†å¤§å°å†™æ¯”è¾ƒä¸¤ä¸ªä¸²
 
 /*int main() {
-	// ·µ»ØÖ¸Ïò´íÎóĞÅÏ¢×Ö·û´®µÄÖ¸Õë
+	// è¿”å›æŒ‡å‘é”™è¯¯ä¿¡æ¯å­—ç¬¦ä¸²çš„æŒ‡é’ˆ
 	char *buffer;
 	buffer=strerror(errno);
 	printf("Error:%s\n",buffer);
@@ -67,7 +67,7 @@
 }*/
 
 /*int main() {
-	// ±È½ÏÁ½¸ö´®µÄÇ°n¸ö×Ö·û´óĞ¡£¬Çø·Ö´óĞ¡Ğ´
+	// æ¯”è¾ƒä¸¤ä¸ªä¸²çš„å‰nä¸ªå­—ç¬¦å¤§å°ï¼ŒåŒºåˆ†å¤§å°å†™
 	char *buf1="aaabbb",*buf2="bbbccc",*buf3="ccc";
 	int ptr;
 	ptr=strncmp(buf2,buf1,3);
@@ -78,10 +78,10 @@
 	return 0;
 }*/
 
-// strncmpi£¬strnicmp ±È½ÏÁ½¸ö´®µÄÇ°n¸ö×Ö·û´óĞ¡£¬²»Çø·Ö´óĞ¡Ğ´
+// strncmpiï¼Œstrnicmp æ¯”è¾ƒä¸¤ä¸ªä¸²çš„å‰nä¸ªå­—ç¬¦å¤§å°ï¼Œä¸åŒºåˆ†å¤§å°å†™
 
 /*int main() {
-	// ¸´ÖÆÒ»¸ö´®µÄÇ°n¸ö×Ö·ûµ½ÁíÒ»¸ö´®ÖĞ
+	// å¤åˆ¶ä¸€ä¸ªä¸²çš„å‰nä¸ªå­—ç¬¦åˆ°å¦ä¸€ä¸ªä¸²ä¸­
 	char str[10],*buf="abcdefghi";
 	strncpy(str,buf,4);
 	str[4]='\0';
@@ -91,7 +91,7 @@
 }*/
 
 /*int main() {
-	// ½«Ò»¸ö×Ö·û´®µÄÇ°n¸ö×Ö·ûÉèÖÃÎªÖ¸¶¨µÄ×Ö·û
+	// å°†ä¸€ä¸ªå­—ç¬¦ä¸²çš„å‰nä¸ªå­—ç¬¦è®¾ç½®ä¸ºæŒ‡å®šçš„å­—ç¬¦
 	char str[]="abcdefghijklmnopqrstuvwxyz";
 	char letter='x';
 	printf("string before strnset:%s\n",str);
@@ -102,7 +102,7 @@
 }*/
 
 /*int main() {
-	// ÔÚstr1ÖĞ²éÕÒstr2ÖĞÈÎÒâÒ»¸ö×Ö·ûµÚÒ»´Î³öÏÖµÄÎ»ÖÃ
+	// åœ¨str1ä¸­æŸ¥æ‰¾str2ä¸­ä»»æ„ä¸€ä¸ªå­—ç¬¦ç¬¬ä¸€æ¬¡å‡ºç°çš„ä½ç½®
 	char *str1="abcdefghijklmnopqrstuvwxyz";
 	char *str2="onm",*ptr;
 	ptr=strpbrk(str1,str2);
@@ -112,7 +112,7 @@
 }*/
 
 /*int main() {
-	// ²éÕÒÔÚstrÖĞ×Ö·ûc×îºóÒ»´Î³öÏÖµÄÎ»ÖÃ
+	// æŸ¥æ‰¾åœ¨strä¸­å­—ç¬¦cæœ€åä¸€æ¬¡å‡ºç°çš„ä½ç½®
 	char str[15],*ptr,c='r';
 	strcpy(str,"This is a string");
 	ptr=strrchr(str,c);
@@ -122,9 +122,9 @@
 }*/
 
 /*int main() {
-	// ×Ö·û´®µ¹×ª
-	char str[]="string"; // Èç¹ûĞ´³Échar *str="string"; Ôò»á±¨´í
-	// strÕâ¸öÖ¸ÕëÔÚÕ»ÉÏ£¬¶øËüÖ¸ÏòµÄ¶ÔÏóÔò´æ´¢ÔÚÄÚ´æÖĞµÄ³£Á¿´æ´¢Çø
+	// å­—ç¬¦ä¸²å€’è½¬
+	char str[]="string"; // å¦‚æœå†™æˆchar *str="string"; åˆ™ä¼šæŠ¥é”™
+	// strè¿™ä¸ªæŒ‡é’ˆåœ¨æ ˆä¸Šï¼Œè€Œå®ƒæŒ‡å‘çš„å¯¹è±¡åˆ™å­˜å‚¨åœ¨å†…å­˜ä¸­çš„å¸¸é‡å­˜å‚¨åŒº
 	printf("Before strrev():%s\n",str);
 	strrev(str);
 	printf("After strrev():%s\n",str);
@@ -132,7 +132,7 @@
 }*/
 
 /*int main() {
-	// ÔÚstr2ÖĞ²éÕÒÓëstr1µÚÒ»´Î³öÏÖ²»Í¬µÄÎ»ÖÃ
+	// åœ¨str2ä¸­æŸ¥æ‰¾ä¸str1ç¬¬ä¸€æ¬¡å‡ºç°ä¸åŒçš„ä½ç½®
 	char *str1="1234567890";
 	char *str2="123DC8";
 	int length=strspn(str1,str2);
@@ -141,7 +141,7 @@
 }*/
 
 /*int main() {
-	// ÔÚstr1ÖĞ²éÕÒstr2µÚÒ»´Î³öÏÖµÄÎ»ÖÃ
+	// åœ¨str1ä¸­æŸ¥æ‰¾str2ç¬¬ä¸€æ¬¡å‡ºç°çš„ä½ç½®
 	char *str1="Borland International",*str2="nation",*ptr;
 	ptr=strstr(str1,str2);
 	printf("The substring is:%s\n",ptr);
@@ -149,7 +149,7 @@
 }*/
 
 /*int main() {
-	// ½«×Ö·û´®×ª»»³ÉdoubleĞÍÖµ
+	// å°†å­—ç¬¦ä¸²è½¬æ¢æˆdoubleå‹å€¼
 	char input[80],*endptr;
 	double d;
 	printf("Enter a floatint point number:");
@@ -160,7 +160,7 @@
 }*/
 
 /*int main() {
-	// ²éÕÒÔÚµÚ¶ş¸ö´®ÖĞÖ¸¶¨µÄ·Ö½ç·û·Ö¸ô¿ªµÄµ¥´Ê
+	// æŸ¥æ‰¾åœ¨ç¬¬äºŒä¸ªä¸²ä¸­æŒ‡å®šçš„åˆ†ç•Œç¬¦åˆ†éš”å¼€çš„å•è¯
 	char input[16]="abc,d";
 	char *p;
 	// strtok places a NULL terminator in front of the token,if found
@@ -174,11 +174,11 @@
 	return 0;
 }*/
 
-// strtol ½«´®×ª»»³É³¤ÕûÊı
-// strupr ½«´®ÖĞµÄĞ¡Ğ´×ÖÄ¸×ª»»³É´óĞ´×ÖÄ¸
+// strtol å°†ä¸²è½¬æ¢æˆé•¿æ•´æ•°
+// strupr å°†ä¸²ä¸­çš„å°å†™å­—æ¯è½¬æ¢æˆå¤§å†™å­—æ¯
 
 /*int main() {
-	// ½»»»×Ö½Ú
+	// äº¤æ¢å­—èŠ‚
 	char str1[15]="rFna koBlrna d",target[15];
 	swab(str1,target,strlen(str1));
 	printf("This is target:%s\n",target);

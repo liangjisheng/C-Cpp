@@ -10,17 +10,17 @@ int main(int argc,char *argv[])
 		<<s.find("cde")<<endl;
 	cout<<"s.find(cde): "
 		<<s.rfind("cde")<<endl;
-	cout<<"s.find_first_of(udu): "//·µ»ØsÖÐµÚÒ»¸öºÍuduÈÎÒâ×Ö·ûÏàÆ¥ÅäµÄÎ»ÖÃ
+	cout<<"s.find_first_of(udu): "//è¿”å›žsä¸­ç¬¬ä¸€ä¸ªå’Œuduä»»æ„å­—ç¬¦ç›¸åŒ¹é…çš„ä½ç½®
 		<<s.find_first_of("ude")
-		<<"\ns.find_first_of(udu,5): "//·µ»ØsÖÐ´ÓµÚ5¸öÎ»ÖÃ¿ªÊ¼µÚÒ»¸öºÍuduÈÎÒâ×Ö·ûÏàÆ¥ÅäµÄÎ»ÖÃ
+		<<"\ns.find_first_of(udu,5): "//è¿”å›žsä¸­ä»Žç¬¬5ä¸ªä½ç½®å¼€å§‹ç¬¬ä¸€ä¸ªå’Œuduä»»æ„å­—ç¬¦ç›¸åŒ¹é…çš„ä½ç½®
 		<<s.find_first_of("udu",5)<<endl;
 	cout<<"s.find_first_of(usurp): "
 		<<s.find_first_of("usurp")
 		<<"\n***NOTE: string::nops= "
 		<<string::npos<<endl;
 	cout<<"s.find_first_not_of(udead): "
-		<<s.find_first_not_of("udead")<<endl;//·µ»ØsÖÐµÚÒ»¸öºÍuduÈÎÒâ×Ö·û²»ÏàÆ¥ÅäµÄÎ»ÖÃ
+		<<s.find_first_not_of("udead")<<endl;//è¿”å›žsä¸­ç¬¬ä¸€ä¸ªå’Œuduä»»æ„å­—ç¬¦ä¸ç›¸åŒ¹é…çš„ä½ç½®
 	cout<<"s.find_last_not_of(udead): "
-		<<s.find_last_not_of("udead",s.size())<<endl;//·µ»ØsÖÐÐ¡ÓÚµÈÓÚposµÄ×î´óµÄÒ»¸öºÍudeadÖÐÈÎÒâ×Ö·û²»ÏàÆ¥ÅäµÄÎ»ÖÃ
+		<<s.find_last_not_of("udead",s.size())<<endl;//è¿”å›žsä¸­å°äºŽç­‰äºŽposçš„æœ€å¤§çš„ä¸€ä¸ªå’Œudeadä¸­ä»»æ„å­—ç¬¦ä¸ç›¸åŒ¹é…çš„ä½ç½®
 	return 0;
 }

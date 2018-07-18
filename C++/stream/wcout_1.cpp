@@ -6,18 +6,18 @@ using namespace std;
 
 int _tmain(int argc,_TCHAR* argv[])
 {
-	// ¶ÔÓÚwcout£¬ĞèÒª½«ÆälocaleÉèÎª±¾µØÓïÑÔ²ÅÄÜÊä³öÖĞÎÄ
+	// å¯¹äºwcoutï¼Œéœ€è¦å°†å…¶localeè®¾ä¸ºæœ¬åœ°è¯­è¨€æ‰èƒ½è¾“å‡ºä¸­æ–‡
 	wcout.imbue(locale("chs"));
 
-	const char* psa="Aºº×ÖABC";
+	const char* psa="Aæ±‰å­—ABC";
 	cout<<psa; cout.clear(); cout<<endl;
 
-	const wchar_t* psw=L"Wºº×ÖABC";
+	const wchar_t* psw=L"Wæ±‰å­—ABC";
 	wcout<<psw; wcout.clear(); wcout<<endl;
 
-	wstring s(L"ÎÒ°®Äã");
+	wstring s(L"æˆ‘çˆ±ä½ ");
 	// wcout<<s<<endl;
-	wcout<<L"ÎÒ°®Äã"<<endl;
+	wcout<<L"æˆ‘çˆ±ä½ "<<endl;
 
 	// C
 	printf("\nC:\n");

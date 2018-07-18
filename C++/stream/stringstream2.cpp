@@ -8,18 +8,18 @@ int main()
 	
 	stringstream stream;
 	int first,second;	
-	stream<<"456";		//²åÈë×Ö·û´®
-	stream>>first;		//×ª»»³Éint
+	stream<<"456";		//æ’å…¥å­—ç¬¦ä¸²
+	stream>>first;		//è½¬æ¢æˆint
 	cout<<first<<endl;
-	stream.clear();		//ÔÚ½øĞĞ¶à´Î×ª»»Ç°£¬±ØĞëÇå³ıstream
-	stream<<true;		//²åÈëboolÖµ
-	stream>>second;		//ÌáÈ¡³öint
+	stream.clear();		//åœ¨è¿›è¡Œå¤šæ¬¡è½¬æ¢å‰ï¼Œå¿…é¡»æ¸…é™¤stream
+	stream<<true;		//æ’å…¥boolå€¼
+	stream>>second;		//æå–å‡ºint
 	cout<<second<<endl;
 
 	stream.clear();
 	string str="I am a boy";
 	stream<<str;	// Initialize
-	// stream.str(str);	// ÓëÉÏÒ»ĞĞµÈĞ§
+	// stream.str(str);	// ä¸ä¸Šä¸€è¡Œç­‰æ•ˆ
 	string s;
 	while(stream>>s)
 		cout<<s<<endl;

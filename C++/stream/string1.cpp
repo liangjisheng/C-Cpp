@@ -19,7 +19,7 @@ using namespace std;
 
 //#include <alloc.h>
 // strcspn
-// ¹¦ ÄÜ: ÔÚstring1ÖĞÄæÏò²éÕÒstring2ÖĞÈÎºÎÒ»¸ö×Ö·ûµÚÒ»´Î³öÏÖµÄÎ»ÖÃ
+// åŠŸ èƒ½: åœ¨string1ä¸­é€†å‘æŸ¥æ‰¾string2ä¸­ä»»ä½•ä¸€ä¸ªå­—ç¬¦ç¬¬ä¸€æ¬¡å‡ºç°çš„ä½ç½®
 /*int main(void)
 {
 	char *string1 = "1234567890";
@@ -31,8 +31,8 @@ using namespace std;
 }*/
 
 // strerror
-// ¹¦ ÄÜ: ·µ»ØÖ¸Ïò´íÎóĞÅÏ¢×Ö·û´®µÄÖ¸Õë
-// ÓÃ ·¨: char *strerror(int errnum);
+// åŠŸ èƒ½: è¿”å›æŒ‡å‘é”™è¯¯ä¿¡æ¯å­—ç¬¦ä¸²çš„æŒ‡é’ˆ
+// ç”¨ æ³•: char *strerror(int errnum);
 /*int main(void)
 {
 	char *buffer;
@@ -42,13 +42,13 @@ using namespace std;
 	return 0;
 }*/
 
-// º¯ÊıÃû: strnset
-// ¹¦ ÄÜ: ½«Ò»¸ö´®ÖĞÇ°n¸ö×Ö·û¶¼ÉèÎªÖ¸¶¨×Ö·û
-// ÓÃ ·¨: char *strnset(char *str, char ch, unsigned n);
+// å‡½æ•°å: strnset
+// åŠŸ èƒ½: å°†ä¸€ä¸ªä¸²ä¸­å‰nä¸ªå­—ç¬¦éƒ½è®¾ä¸ºæŒ‡å®šå­—ç¬¦
+// ç”¨ æ³•: char *strnset(char *str, char ch, unsigned n);
 
 // strpbrk
-// ¹¦ ÄÜ: ÔÚstr1ÖĞ²éÕÒstr2ÖĞ³öÏÖµÄµÚÒ»¸ö×Ö·û
-// ÓÃ ·¨: char *strpbrk(char *str1, char *str2);
+// åŠŸ èƒ½: åœ¨str1ä¸­æŸ¥æ‰¾str2ä¸­å‡ºç°çš„ç¬¬ä¸€ä¸ªå­—ç¬¦
+// ç”¨ æ³•: char *strpbrk(char *str1, char *str2);
 /*int main(void)
 {
 	char *string1 = "abcdefghijklmnopqrstuvwxyz";
@@ -62,9 +62,9 @@ using namespace std;
 	return 0;
 }*/
 
-// º¯ÊıÃû: strrchr
-// ¹¦ ÄÜ: ÔÚ´®ÖĞ²éÕÒÖ¸¶¨×Ö·ûµÄ×îºóÒ»¸ö³öÏÖµÄÎ»ÖÃ
-// ÓÃ ·¨: char *strrchr(char *str, char c);
+// å‡½æ•°å: strrchr
+// åŠŸ èƒ½: åœ¨ä¸²ä¸­æŸ¥æ‰¾æŒ‡å®šå­—ç¬¦çš„æœ€åä¸€ä¸ªå‡ºç°çš„ä½ç½®
+// ç”¨ æ³•: char *strrchr(char *str, char c);
 
 /*#include <string.h>
 #include <stdio.h>
@@ -82,8 +82,8 @@ int main(void)
 }*/
 
 // strspn
-// ¹¦ ÄÜ: ÔÚstr1ÖĞ²éÕÒÓëstr2ÖĞ×Ö·ûµÚÒ»¸ö²»Í¬µÄÎ»ÖÃ
-// ÓÃ ·¨: int strspn(char *str1, char *str2);
+// åŠŸ èƒ½: åœ¨str1ä¸­æŸ¥æ‰¾ä¸str2ä¸­å­—ç¬¦ç¬¬ä¸€ä¸ªä¸åŒçš„ä½ç½®
+// ç”¨ æ³•: int strspn(char *str1, char *str2);
 /*int main(void)
 {
 	char *string1 = "1234567890";
@@ -94,9 +94,9 @@ int main(void)
 	return 0;
 }*/
 
-// º¯ÊıÃû: strstr
-// ¹¦ ÄÜ: ÔÚ´®ÖĞ²éÕÒÖ¸¶¨×Ö·û´®µÄµÚÒ»´Î³öÏÖ
-// ÓÃ ·¨: char *strstr(char *str1, char *str2);
+// å‡½æ•°å: strstr
+// åŠŸ èƒ½: åœ¨ä¸²ä¸­æŸ¥æ‰¾æŒ‡å®šå­—ç¬¦ä¸²çš„ç¬¬ä¸€æ¬¡å‡ºç°
+// ç”¨ æ³•: char *strstr(char *str1, char *str2);
 /*int main(void)
 {
 	char *str1 = "Borland International", *str2 = "nation", *ptr;
@@ -105,9 +105,9 @@ int main(void)
 	return 0;
 }*/
 
-// º¯ÊıÃû: strtod
-// ¹¦ ÄÜ: ½«×Ö·û´®×ª»»ÎªdoubleĞÍÖµ
-// ÓÃ ·¨: double strtod(char *str, char **endptr);
+// å‡½æ•°å: strtod
+// åŠŸ èƒ½: å°†å­—ç¬¦ä¸²è½¬æ¢ä¸ºdoubleå‹å€¼
+// ç”¨ æ³•: double strtod(char *str, char **endptr);
 /*int main(void)
 {
 	char input[80], *endptr;
@@ -119,9 +119,9 @@ int main(void)
 	return 0;
 }*/
 
-// º¯ÊıÃû: strtok
-// ¹¦ ÄÜ: ²éÕÒÓÉÔÚµÚ¶ş¸ö´®ÖĞÖ¸¶¨µÄ·Ö½ç·û·Ö¸ô¿ªµÄµ¥´Ê
-// ÓÃ ·¨: char *strtok(char *str1, char *str2);
+// å‡½æ•°å: strtok
+// åŠŸ èƒ½: æŸ¥æ‰¾ç”±åœ¨ç¬¬äºŒä¸ªä¸²ä¸­æŒ‡å®šçš„åˆ†ç•Œç¬¦åˆ†éš”å¼€çš„å•è¯
+// ç”¨ æ³•: char *strtok(char *str1, char *str2);
 /*int main(void)
 {
 	char input[16] = "abc,d";
@@ -133,9 +133,9 @@ int main(void)
 	return 0;
 }*/
 
-// º¯ÊıÃû: strtol
-// ¹¦ ÄÜ: ½«´®×ª»»Îª³¤ÕûÊı
-// ÓÃ ·¨: long strtol(char *str, char **endptr, int base);
+// å‡½æ•°å: strtol
+// åŠŸ èƒ½: å°†ä¸²è½¬æ¢ä¸ºé•¿æ•´æ•°
+// ç”¨ æ³•: long strtol(char *str, char **endptr, int base);
 
 /*
 int main(void)
@@ -148,9 +148,9 @@ int main(void)
 	return 0;
 }*/
 
-// º¯ÊıÃû: strupr
-// ¹¦ ÄÜ: ½«´®ÖĞµÄĞ¡Ğ´×ÖÄ¸×ª»»Îª´óĞ´×ÖÄ¸
-// ÓÃ ·¨: char *strupr(char *str);
+// å‡½æ•°å: strupr
+// åŠŸ èƒ½: å°†ä¸²ä¸­çš„å°å†™å­—æ¯è½¬æ¢ä¸ºå¤§å†™å­—æ¯
+// ç”¨ æ³•: char *strupr(char *str);
 /*int main(void)
 {
 	char *string = "abcdefghijklmnopqrstuvwxyz";	
@@ -158,9 +158,9 @@ int main(void)
 	return 0;
 }*/
 
-// º¯ÊıÃû: swab
-// ¹¦ ÄÜ: ½»»»×Ö½Ú
-// ÓÃ ·¨: void swab (char *from, char *to, int nbytes);
+// å‡½æ•°å: swab
+// åŠŸ èƒ½: äº¤æ¢å­—èŠ‚
+// ç”¨ æ³•: void swab (char *from, char *to, int nbytes);
 /*char source[15] = "rFna koBlrna d";
 char target[15];
 int main(void)

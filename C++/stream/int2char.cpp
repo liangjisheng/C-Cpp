@@ -40,7 +40,7 @@ int main()
 	char* pstr;
 	pstr=new char[len+1];
 	int2char(pstr,num);
-	cout<<"×ª»»³É×Ö·û´®:";
+	cout<<"è½¬æ¢æˆå­—ç¬¦ä¸²:";
 	cout<<pstr<<endl;
 
 	system("pause");

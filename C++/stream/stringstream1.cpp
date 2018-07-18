@@ -29,8 +29,8 @@ int main()
 	for_each(str.begin(),str.end(),print);		// output Error
 	cout<<endl;
 
-	// Èç¹ûÄãÏëÍ¨¹ýÊ¹ÓÃÍ¬Ò»stringstream¶ÔÏóÊµÏÖ¶àÖÖÀàÐÍµÄ×ª»»£¬
-	//Çë×¢ÒâÔÚÃ¿Ò»´Î×ª»»Ö®ºó¶¼±ØÐëµ÷ÓÃclear()³ÉÔ±º¯Êý¡£
+	// å¦‚æžœä½ æƒ³é€šè¿‡ä½¿ç”¨åŒä¸€stringstreamå¯¹è±¡å®žçŽ°å¤šç§ç±»åž‹çš„è½¬æ¢ï¼Œ
+	//è¯·æ³¨æ„åœ¨æ¯ä¸€æ¬¡è½¬æ¢ä¹‹åŽéƒ½å¿…é¡»è°ƒç”¨clear()æˆå‘˜å‡½æ•°ã€‚
 	sstr.clear();
 	string name="li";
 	char cname[20];

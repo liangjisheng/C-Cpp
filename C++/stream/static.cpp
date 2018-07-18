@@ -24,7 +24,7 @@ int main()
 	q=&arr[2];
 	cout<<arr[q-p]<<endl;
 
-	int **pa[3][4];		// Êı×éÔ¤·ÖÅäÄÚ´æ¿Õ¼ä
+	int **pa[3][4];		// æ•°ç»„é¢„åˆ†é…å†…å­˜ç©ºé—´
 	cout<<sizeof(pa)<<endl;
 	
 	system("pause");

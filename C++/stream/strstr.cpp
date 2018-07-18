@@ -1,5 +1,5 @@
 // const char* strstr(const char* string,const char* strCharSet);
-// ¸Ãº¯Êı·µ»ØÖ÷´®ÖĞ×Ö·û×Ó´®µÄÎ»ÖÃÒÔºóµÄËùÓĞ×Ö·û
+// è¯¥å‡½æ•°è¿”å›ä¸»ä¸²ä¸­å­—ç¬¦å­ä¸²çš„ä½ç½®ä»¥åçš„æ‰€æœ‰å­—ç¬¦
 #include"stdio.h"
 
 /*const char* strstr(const char* string,const char* strCharSet)

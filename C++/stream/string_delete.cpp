@@ -5,8 +5,8 @@ int main()
 {
 	char str[]="askdaskaskdaskg";
 	char del_str[]="ask";
-	printf("Ô´×Ö·û´®:%s\n",str);
-	printf("É¾³ıµÄ×Ö·û´®:%s\n",del_str);
+	printf("æºå­—ç¬¦ä¸²:%s\n",str);
+	printf("åˆ é™¤çš„å­—ç¬¦ä¸²:%s\n",del_str);
 	char* p=str;
 	char* dp=del_str;
 	int del_len=strlen(del_str);
@@ -25,7 +25,7 @@ int main()
 		p=&str[i]; dp=del_str;
 		j=0;
 	}
-	printf("É¾³ıºóµÄ×Ö·û´®:%s\n",str);
+	printf("åˆ é™¤åçš„å­—ç¬¦ä¸²:%s\n",str);
 
 	return 0;
 }

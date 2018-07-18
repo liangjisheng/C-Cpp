@@ -16,7 +16,7 @@ int main()
 	char * pstr=new char[len+1];
 	pstr[len]='\0';
 	itoa(num,pstr,10);
-	cout<<"×ª»»ºóµÄ×Ö·û´®:"<<pstr<<endl;
+	cout<<"è½¬æ¢åçš„å­—ç¬¦ä¸²:"<<pstr<<endl;
 
 	system("pause");
 	return 0;

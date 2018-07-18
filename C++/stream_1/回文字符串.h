@@ -1,4 +1,4 @@
- // 判断一字符串是否为回文
+ // 鍒ゆ柇涓�瀛楃涓叉槸鍚︿负鍥炴枃
 int func(char* p)
 {
 	if(p==NULL) return 0;

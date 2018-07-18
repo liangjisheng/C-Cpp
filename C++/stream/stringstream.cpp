@@ -1,9 +1,9 @@
 #include"iostream"
 #include"sstream"	// for istringstream
 #include"string"
-// istringstreamÀàÊÇ´ÓistreamºÍstringstreambaseÅÉÉú¶øÀ´£¬
-// ostringstreamÊÇ´ÓostreamºÍ stringstreambaseÅÉÉú¶øÀ´£¬ 
-// stringstreamÔòÊÇ´ÓiostreamÀàºÍstringstreambaseÅÉÉú¶øÀ´¡£
+// istringstreamç±»æ˜¯ä»istreamå’Œstringstreambaseæ´¾ç”Ÿè€Œæ¥ï¼Œ
+// ostringstreamæ˜¯ä»ostreamå’Œ stringstreambaseæ´¾ç”Ÿè€Œæ¥ï¼Œ 
+// stringstreamåˆ™æ˜¯ä»iostreamç±»å’Œstringstreambaseæ´¾ç”Ÿè€Œæ¥ã€‚
 
 int main() {
 	using std::cout;
@@ -14,7 +14,7 @@ int main() {
 	using std::string;
 
 	istringstream istr("1 56.7");
-	// istr.str("1 56.7"); // ÓëÉÏÒ»ĞĞµÈĞ§
+	// istr.str("1 56.7"); // ä¸ä¸Šä¸€è¡Œç­‰æ•ˆ
 	cout<<istr.str()<<endl;
 	int a;
 	float b;

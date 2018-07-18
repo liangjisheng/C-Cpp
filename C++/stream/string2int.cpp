@@ -13,7 +13,7 @@ void int2str(string &strdest, const int src)
 {
 	stringstream stream;
 	stream << src;
-	// Ҳ����ʹ��stream >> strdest;
+	// 也可以使用stream >> strdest;
 	strdest = stream.str();
 }
 
@@ -25,7 +25,7 @@ void str2int(int &numdest, const string &strsrc)
 
 void int2str_C(string &strnum, const int num)
 {
-	char s[15] = {0};		// �趨15λ���ڴ洢32λintֵ�㹻��
+	char s[15] = {0};		// 设定15位对于存储32位int值足够了
 	itoa(num, s, 13);
 	strnum = s;
 }

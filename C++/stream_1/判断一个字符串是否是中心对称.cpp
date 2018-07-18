@@ -14,7 +14,7 @@ int main()
 		if(a[mid]==a[len-mid-1])mid++;
 		else {mid=0;break;}
 	}
-	if(mid)cout<<"ÖĞĞÄ¶Ô³Æ."<<endl;
-	else cout<<"ÖĞĞÄ²»¶Ô³Æ."<<endl;
+	if(mid)cout<<"ä¸­å¿ƒå¯¹ç§°."<<endl;
+	else cout<<"ä¸­å¿ƒä¸å¯¹ç§°."<<endl;
 	return 0;
 }

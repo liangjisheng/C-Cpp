@@ -10,7 +10,7 @@ void main()
 {
 	char string[50];
 	int len;
-	printf("ÊäÈë×Ö·û´®,Ö±½ÓÊäÈë»Ø³µ½áÊø\n");
+	printf("è¾“å…¥å­—ç¬¦ä¸²,ç›´æ¥è¾“å…¥å›è½¦ç»“æŸ\n");
 	while(1)
 	{
 	   printf("input the string:");

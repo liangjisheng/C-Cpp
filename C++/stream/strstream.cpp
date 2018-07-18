@@ -11,7 +11,7 @@ int main()
 	ostr<<"Hello"<<' ';
 	ostr<<99-14<<hex<<' ';
 	ostr.setf(ios::showbase);
-	// Ê¹ÓÃostrstreamÊä³öµ½Á÷¶ÔÏóµÄÊ±ºò,ÒªÓÃends½áÊø×Ö·û´®
+	// ä½¿ç”¨ostrstreamè¾“å‡ºåˆ°æµå¯¹è±¡çš„æ—¶å€™,è¦ç”¨endsç»“æŸå­—ç¬¦ä¸²
 	ostr<<100<<ends;
 	cout<<pbuffer<<endl;
 	delete [] pbuffer;

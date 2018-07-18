@@ -18,7 +18,7 @@ int main ()
 	if (found != string::npos)  
 		cout << "first 'needle' found at: " << found << '\n';  
 
-	// ´ÓstrµÄµÚfound + 1Ë÷Òý³ö¿ªÊ¼²éÕÒµÚÒ»¸ö²ÎÊýµÄÇ°6¸ö×Ö·ûÔÚstrÖÐµÄÎ»ÖÃ
+	// ä»Žstrçš„ç¬¬found + 1ç´¢å¼•å‡ºå¼€å§‹æŸ¥æ‰¾ç¬¬ä¸€ä¸ªå‚æ•°çš„å‰6ä¸ªå­—ç¬¦åœ¨strä¸­çš„ä½ç½®
 	found = str.find("needles are small",found + 1, 6);  
 	if (found != string::npos)  
 		cout << "second 'needle' found at: " << found << '\n';  
@@ -32,7 +32,7 @@ int main ()
 		cout << "Period found at: " << found << '\n';  
 
 	// let's replace the first needle:  
-	str.replace(str.find(str2), str2.length(), "preposition");  //replace ÓÃ·¨  
+	str.replace(str.find(str2), str2.length(), "preposition");  //replace ç”¨æ³•  
 	cout << str << '\n';  
 
 	system("pause");

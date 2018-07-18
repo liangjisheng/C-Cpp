@@ -1,4 +1,4 @@
-// ´ÓstrÖÐÉ¾³ý×Ö·û´®sub
+// ä»Žsträ¸­åˆ é™¤å­—ç¬¦ä¸²sub
 #include"stdio.h"
 #include"string.h"
 
