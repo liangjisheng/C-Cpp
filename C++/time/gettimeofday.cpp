@@ -1,15 +1,15 @@
-//¶¨Òåº¯Êı   int gettimeofday ( struct timeval * tv , struct timezone * tz )
-//º¯ÊıËµÃ÷   gettimeofday()»á°ÑÄ¿Ç°µÄÊ±¼äÓÃtvËùÖ¸µÄ½á¹¹·µ»Ø£¬
-//µ±µØÊ±ÇøµÄĞÅÏ¢Ôò·Åµ½tzËùÖ¸µÄ½á¹¹ÖĞ¡£
+//å®šä¹‰å‡½æ•°   int gettimeofday ( struct timeval * tv , struct timezone * tz )
+//å‡½æ•°è¯´æ˜   gettimeofday()ä¼šæŠŠç›®å‰çš„æ—¶é—´ç”¨tvæ‰€æŒ‡çš„ç»“æ„è¿”å›ï¼Œ
+//å½“åœ°æ—¶åŒºçš„ä¿¡æ¯åˆ™æ”¾åˆ°tzæ‰€æŒ‡çš„ç»“æ„ä¸­ã€‚
 // timeval:
 /* struct timeval {
-long tv_sec; //Ãë
-long tv_usec;//Î¢Ãë
+long tv_sec; //ç§’
+long tv_usec;//å¾®ç§’
 };
-timezone ½á¹¹¶¨Òå
+timezone ç»“æ„å®šä¹‰
 struct timezone {
-int tz_minuteswest; //ºÍGreenwich Ê±¼ä²îÁË¶àÉÙ·ÖÖÓ
-int tz_dsttime; //ÈÕ¹â½ÚÔ¼Ê±¼äµÄ×´Ì¬
+int tz_minuteswest; //å’ŒGreenwich æ—¶é—´å·®äº†å¤šå°‘åˆ†é’Ÿ
+int tz_dsttime; //æ—¥å…‰èŠ‚çº¦æ—¶é—´çš„çŠ¶æ€
 }*/
 
 #include"time.h"

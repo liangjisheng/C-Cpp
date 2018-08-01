@@ -6,15 +6,15 @@
 
 int main()
 {
-	// time_t¶¨ÒåÓëtime.hÖĞ£¬time_tÊÇlong
+	// time_tå®šä¹‰ä¸time.hä¸­ï¼Œtime_tæ˜¯long
 	time_t rawtime;
 	struct tm timeinfo;
-	// time()»ñÈ¡µ±Ç°Ê±¼ä¾à1970Äê1ÔÂ1ÈÕ0Ê±0·Ö0ÃëµÄÃëÊı
+	// time()è·å–å½“å‰æ—¶é—´è·1970å¹´1æœˆ1æ—¥0æ—¶0åˆ†0ç§’çš„ç§’æ•°
 	time(&rawtime);
-	// ×ª»»Îªµ±µØÊ±¼ä£¬tmÊ±¼ä½á¹¹
+	// è½¬æ¢ä¸ºå½“åœ°æ—¶é—´ï¼Œtmæ—¶é—´ç»“æ„
 	localtime_s(&timeinfo, &rawtime);
 	char szTime[64] = {0};
-	// ×ª»»Îª±ê×¼ASCIIÊ±¼ä¸ñÊ½ ĞÇÆÚ ÔÂ ÈÕ Ê±£º·Ö£ºÃë Äê
+	// è½¬æ¢ä¸ºæ ‡å‡†ASCIIæ—¶é—´æ ¼å¼ æ˜ŸæœŸ æœˆ æ—¥ æ—¶ï¼šåˆ†ï¼šç§’ å¹´
 	asctime_s(szTime, &timeinfo);
 	printf("The current date/time is: %s\n", szTime);
 
@@ -25,11 +25,11 @@ int main()
 	printf("timeinfo.tm_hour: %d\n", timeinfo.tm_hour);
 	printf("timeinfo.tm_min: %d\n", timeinfo.tm_min);
 	printf("timeinfo.tm_sec: %d\n", timeinfo.tm_sec);
-	// tm_wday´ú±í½ñÌìÊÇÕâÖÜµÄµÚ¼¸Ìì
+	// tm_wdayä»£è¡¨ä»Šå¤©æ˜¯è¿™å‘¨çš„ç¬¬å‡ å¤©
 	printf("timeinfo.tm_wday: %d\n", timeinfo.tm_wday);
-	// tm_mday´ú±í½ñÌìÊÇÕâ¸öÔÂµÄµÚ¼¸Ìì
+	// tm_mdayä»£è¡¨ä»Šå¤©æ˜¯è¿™ä¸ªæœˆçš„ç¬¬å‡ å¤©
 	printf("timeinfo.tm_mday: %d\n", timeinfo.tm_mday);
-	// tm_day´ú±í½ñÌìÊÇ½ñÄêµÄµÚ¼¸Ìì
+	// tm_dayä»£è¡¨ä»Šå¤©æ˜¯ä»Šå¹´çš„ç¬¬å‡ å¤©
 	printf("timeinfo.tm_yday: %d\n", timeinfo.tm_yday);
 
 	getchar();

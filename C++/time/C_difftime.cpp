@@ -13,7 +13,7 @@ int main()
 	c_end = clock();
 	t_end = time(NULL);
 
-	// difftime()·µ»ØÁ½¸öÊ±¼äµÄÊ±¼ä¼ä¸ô
+	// difftime()è¿”å›žä¸¤ä¸ªæ—¶é—´çš„æ—¶é—´é—´éš”
 	printf("The pause used %f ms by clock()\n", difftime(c_end, c_start));
 	printf("The pause used %f s by time()\n", difftime(t_end, t_start));
 

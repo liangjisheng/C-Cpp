@@ -6,8 +6,8 @@
 
 /*int main() {
 	// char* asctime(const struct tm *tbolck)
-	// ±¾º¯Êı°ÑÖ¸¶¨µÄtm½á¹¹ÀàµÄÈÕÆÚ(·Ö¶ÎÈÕÆÚ)×ª»»³É
-	// ÏÂÁĞ¸ñÊ½µÄ×Ö·û´®: Mon Nov 21 11:31:54 1983\n\0
+	// æœ¬å‡½æ•°æŠŠæŒ‡å®šçš„tmç»“æ„ç±»çš„æ—¥æœŸ(åˆ†æ®µæ—¥æœŸ)è½¬æ¢æˆ
+	// ä¸‹åˆ—æ ¼å¼çš„å­—ç¬¦ä¸²: Mon Nov 21 11:31:54 1983\n\0
 	struct tm t;
 	char str[80];
 	t.tm_sec=1;
@@ -25,7 +25,7 @@
 }*/
 
 /*int main() {
-	// clock ¼ÆËã³ÌĞòÔËĞĞÊ±¼ä£¬È·¶¨´¦ÀíÆ÷Ê±¼ä
+	// clock è®¡ç®—ç¨‹åºè¿è¡Œæ—¶é—´ï¼Œç¡®å®šå¤„ç†å™¨æ—¶é—´
 	clock_t start,end;
 	start=clock();
 	delay(1000);
@@ -39,28 +39,28 @@
 }*/
 
 /*int main() {
-	// char*¡¡ctime(const time_t *time)
-	// ½«timeËùÖ¸ÏòµÄÈÕÀúÊ±¼ä×ª»»Îª×Ö·û´®ĞÎÊ½µÄ±¾µØÊ±¼ä¡£
-	// ËüµÈ¼ÛÓÚº¯Êıµ÷ÓÃasctime(localtime(timer))¡£
-	// ×Ö·û´®µÄ¸ñÊ½Îª£ºDDD MMM dd hh:mm:ss YYYY
+	// char*ã€€ctime(const time_t *time)
+	// å°†timeæ‰€æŒ‡å‘çš„æ—¥å†æ—¶é—´è½¬æ¢ä¸ºå­—ç¬¦ä¸²å½¢å¼çš„æœ¬åœ°æ—¶é—´ã€‚
+	// å®ƒç­‰ä»·äºå‡½æ•°è°ƒç”¨asctime(localtime(timer))ã€‚
+	// å­—ç¬¦ä¸²çš„æ ¼å¼ä¸ºï¼šDDD MMM dd hh:mm:ss YYYY
 	time_t t;
-	time(&t); // »ñÈ¡ÏµÍ³Ê±¼ä
+	time(&t); // è·å–ç³»ç»Ÿæ—¶é—´
 	printf("Today's date and time:%s\n",ctime(&t));
 	return 0;
 }*/
 
 // double difftime(time_t time2,time_t time1)
-// ¼ÆËãÁ½¸öÈÕÀúÊ±¼ätime1ºÍtime2µÄÊ±¼ä¼ä¸ô¡£
-// ÆäÖĞtime1ÎªÖ¸¶¨µÄµÚÒ»¸öÊ±¼ä£¬time2ÎªÖ¸¶¨µÄ
-// µÚ¶ş¸öÊ±¼ä¡£time1ÒªĞ¡ÓÚ»òµÈÓÚtime2¡£
-// ·µ»ØÖµ£º·µ»ØÊ±¼ä²î£¬ÒÔÃëÎªµ¥Î»µÄdoubleÀàĞÍ¡£
+// è®¡ç®—ä¸¤ä¸ªæ—¥å†æ—¶é—´time1å’Œtime2çš„æ—¶é—´é—´éš”ã€‚
+// å…¶ä¸­time1ä¸ºæŒ‡å®šçš„ç¬¬ä¸€ä¸ªæ—¶é—´ï¼Œtime2ä¸ºæŒ‡å®šçš„
+// ç¬¬äºŒä¸ªæ—¶é—´ã€‚time1è¦å°äºæˆ–ç­‰äºtime2ã€‚
+// è¿”å›å€¼ï¼šè¿”å›æ—¶é—´å·®ï¼Œä»¥ç§’ä¸ºå•ä½çš„doubleç±»å‹ã€‚
 
 /*int main() {
 	// struct tm *gmtime(const time_t *timer)
-	// °ÑÈÕÆÚºÍÊ±¼ä×ª»»Îª¸ñÁÖÄáÖÎ±ê×¼Ê±¼ä(GMT)¡£
+	// æŠŠæ—¥æœŸå’Œæ—¶é—´è½¬æ¢ä¸ºæ ¼æ—å°¼æ²»æ ‡å‡†æ—¶é—´(GMT)ã€‚
 	time_t t;
 	struct tm *gmt;
-	t=time(NULL); // »ñÈ¡ÏµÍ³Ê±¼ä
+	t=time(NULL); // è·å–ç³»ç»Ÿæ—¶é—´
 	gmt=gmtime(&t);
 	printf("GMT is:%s",asctime(gmt));
 	return 0;
@@ -68,7 +68,7 @@
 
 /*int main() {
 	// struct tm* localtime(const time_t *timer)
-	// °ÑtimerËùÖ¸µÄÈÕÀúÊ±¼ä×ª»»ÎªÒÔ±¾µØÊ±¼ä±íÊ¾µÄ·Ö¶ÎÊ±¼ä
+	// æŠŠtimeræ‰€æŒ‡çš„æ—¥å†æ—¶é—´è½¬æ¢ä¸ºä»¥æœ¬åœ°æ—¶é—´è¡¨ç¤ºçš„åˆ†æ®µæ—¶é—´
 	time_t t;
 	struct tm *tblock;
 	t=time(NULL);
@@ -81,8 +81,8 @@
 
 int main() {
 	// time_t mktime(struct tm* timeptr)
-	// ½«tmÀàĞÍµÄ½á¹¹Ö¸ÕëtimeptrÖ¸ÏòµÄ½á¹¹ÌåÖĞµÄÈÕÆÚÓëÊ±¼ä
-	// ×ª»»Îªtime_tÀàĞÍµÄÈÕÆÚºÍÊ±¼ä£¬²¢·µ»Ø
+	// å°†tmç±»å‹çš„ç»“æ„æŒ‡é’ˆtimeptræŒ‡å‘çš„ç»“æ„ä½“ä¸­çš„æ—¥æœŸä¸æ—¶é—´
+	// è½¬æ¢ä¸ºtime_tç±»å‹çš„æ—¥æœŸå’Œæ—¶é—´ï¼Œå¹¶è¿”å›
 	char *week_day[8]={"Sun","Mon","Tue","Wed","Fri","Sat","Unknow"};
 	struct tm t;
 	t.tm_year=99;

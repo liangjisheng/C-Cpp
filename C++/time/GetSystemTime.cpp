@@ -32,11 +32,11 @@ int _tmain(int argc, TCHAR* argv[], TCHAR* envp[])
 		}
 		else
 		{
-			// UTC�Ǹ�������ʱ�䣬Ҳ����ȫ���׼ʱ�䡣����ʱ����������UTC���Եģ�
-			// �����й��������ڶ�8���������UTC�Ͷ���8��Сʱ��һ��ʹ�õ���ʱ�䶼��
-			// ʹ�ñ���ʱ�䣬Ҳ���ǵ��ú���GetLocalTime
+			// UTC是格林威治时间，也就是全球标准时间。本地时间就是相对于UTC而言的，
+			// 比如中国北京是在东8区，相对于UTC就多了8个小时。一般使用到的时间都是
+			// 使用本地时间，也就是调用函数GetLocalTime
 			SYSTEMTIME stUTC;
-			::GetSystemTime(&stUTC);	// ��ȡϵͳ��UTCʱ��
+			::GetSystemTime(&stUTC);	// 获取系统的UTC时间
 
 			const int nBufSize = 256;
 			TCHAR chBuf[nBufSize] = {0};

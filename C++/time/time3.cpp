@@ -1,7 +1,7 @@
-//获得当前的计数频率，即每秒进行多少次计数
+//鑾峰緱褰撳墠鐨勮鏁伴鐜囷紝鍗虫瘡绉掕繘琛屽灏戞璁℃暟
 // QueryPerformanceFrequency(&limtp);
 
-//获得当前计数次数，基于cpu级的
+//鑾峰緱褰撳墠璁℃暟娆℃暟锛屽熀浜巆pu绾х殑
 //QueryPreformanceCounter(&limtp);
 
 #include"ctime"

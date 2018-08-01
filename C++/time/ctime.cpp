@@ -1,4 +1,4 @@
-//¶¨Òåº¯Êý   char *ctime(const time_t *timep);
+//å®šä¹‰å‡½æ•°   char *ctime(const time_t *timep);
 
 #include"stdio.h"
 #include"time.h"

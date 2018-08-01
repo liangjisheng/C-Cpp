@@ -1,4 +1,4 @@
-//¼ÆËã³ÌĞòÔËĞĞËùÓÃÊ±¼ä
+//è®¡ç®—ç¨‹åºè¿è¡Œæ‰€ç”¨æ—¶é—´
 #include"stdio.h"
 #include"time.h"
 #include"conio.h"
@@ -11,7 +11,7 @@ int main() {
 		printf("%d ",i);
 	printf("\n");
 	time(&etime);
-	printf("³ÌĞòÔËĞĞËùÓÃÊ±¼ä:%ld\n",etime-stime);
+	printf("ç¨‹åºè¿è¡Œæ‰€ç”¨æ—¶é—´:%ld\n",etime-stime);
 	getch();
 
 	return 0;

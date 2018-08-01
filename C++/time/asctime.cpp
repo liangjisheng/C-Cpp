@@ -1,4 +1,4 @@
-//¶¨Òåº¯Êý   char * asctime(const struct tm * timeptr);
+//å®šä¹‰å‡½æ•°   char * asctime(const struct tm * timeptr);
 
 #include"time.h"
 #include"stdio.h"

@@ -1,5 +1,5 @@
-//º¯ÊýÔ­ÐÍ:void tzset(void)
-//º¯Êý¹¦ÄÜ:UNIX¼æÈÝº¯Êý£¬ÓÃÓÚµÃµ½Ê±Çø£¬ÔÚDOS»·¾³ÏÂÎÞÓÃÍ¾
+//å‡½æ•°åŽŸåž‹:void tzset(void)
+//å‡½æ•°åŠŸèƒ½:UNIXå…¼å®¹å‡½æ•°ï¼Œç”¨äºŽå¾—åˆ°æ—¶åŒºï¼Œåœ¨DOSçŽ¯å¢ƒä¸‹æ— ç”¨é€”
 
 #include"time.h"
 #include"stdlib.h"
