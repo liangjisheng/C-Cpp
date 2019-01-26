@@ -1,0 +1,12 @@
+syntax = "proto2";
+package Test;
+
+message PersonInfo {
+	required string name = 1;
+	required int64 age = 2;
+	repeated int64 phone_num = 3;
+}
+
+message Person {
+	repeated PersonInfo people = 1;
+}

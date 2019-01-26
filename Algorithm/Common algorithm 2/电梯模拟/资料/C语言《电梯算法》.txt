@@ -1,0 +1,448 @@
+#include <stdio.h> 
+#include <stdlib.h> 
+#include <winsock.h> 
+#include <winbase.h> 
+#include <string.h> 
+#include "egg.h" 
+#include "elevator.h" 
+
+#define START 0//定义初始状态 
+#define UP 1//上行初始 
+#define DOWN 2//下行初始 
+#define PAUSE 3 
+#define N 100//记录数组的容量 
+
+void getInput(void);// 
+void getInput0(void);// 
+
+void Status_trans(void);//显示当前的状态 
+void control(void);//控制主要的电梯过程 
+void control0(void);//在暂停后的控制 
+void time_count(void); 
+void Uper(void);    //上行 
+void Downer(void);  //下行 
+
+
+
+int Call[N]={0}; 
+int Callup[10]={0};  //存放向上呼叫的整型数组 
+int Callin[10]={0};  //存放内部呼叫的整型数组 
+int Calldown[10]={0};//存放向下呼叫的整型数组  
+int time=0,state=0,prestate=0,flag=1,x=0; 
+int aimLayer=0,currentLayer=1; 
+float cl1=0.0,cl2=0.0; 
+
+
+main() 
+{  
+      int service; 
+      elevator(); 
+
+  system("color 3f"); 
+       
+      printf("EVA 电梯竭诚为您服务，祝乘坐愉快\n"); 
+      printf("请选择服务策略(1为先来先服务,2为顺便服务):\n"); 
+      scanf("%d",&service); 
+      if(service==1) 
+	{ 
+         DWORD ThreadID1 = 1; 
+         HANDLE hRead1 = CreateThread(NULL,0,(LPTHREAD_START_ROUTINE)getInput0,NULL,0,&ThreadID1); 
+     	 } 
+      else 
+	{ 
+         DWORD ThreadID2 = 1; 
+         HANDLE hRead2 = CreateThread(NULL,0,(LPTHREAD_START_ROUTINE)getInput,NULL,0,&ThreadID2); //？？？？？？？？
+      	} 
+      while (1)
+	{ 
+         if(service==1) 
+           control0(); 
+         else 
+           control(); 
+         Status_trans(); /*确定电梯此刻的状态，包括运行方向、所在楼层等*/  
+          
+         
+     	}    
+    
+   system("pause"); 
+     return 0; 
+} 
+
+void Status_trans(void)//yang 
+{ 
+     int i; 
+      
+     switch (state) 
+	{   
+        case START:   
+           if(aimLayer>currentLayer) 
+             state=UP;              
+           if(aimLayer==currentLayer)                        
+              state=PAUSE,prestate=START;    
+           if(aimLayer==0) 
+              state=START;    
+           break; 
+        case UP: 
+             flag=1; 
+             
+                 Uper(); 
+ currentLayer++; 
+ drawCurrentLayer1(currentLayer); 
+ drawCurrentLayer2(currentLayer); 
+                printf("当前电梯楼层  %d\n", currentLayer); 
+                if(currentLayer==aimLayer) 
+		{ 
+           	state=PAUSE,x=1,prestate=UP; 
+          	printf("当前电梯楼层  %d\n", currentLayer); 
+                } 
+                if(currentLayer<aimLayer) 
+                   state=UP,flag=1; 
+                if(currentLayer>aimLayer) 
+                   state=DOWN,flag=-1; 
+             break;      
+        case DOWN:    
+             flag=-1; 
+             
+              
+                 Downer(); 
+ currentLayer--;//? 
+ drawCurrentLayer1(currentLayer); 
+ drawCurrentLayer2(currentLayer); 
+                printf("当前电梯楼层  %d\n", currentLayer); 
+                if(currentLayer==aimLayer) 
+		{ 
+           	 state=PAUSE,x=1,prestate=DOWN; 
+            	printf("当前电梯楼层  %d\n", currentLayer); 
+                } 
+                if(currentLayer<aimLayer) 
+                   state=UP,flag=1; 
+                if(currentLayer>aimLayer) 
+                   state=DOWN,flag=-1;//flag? 
+             break;   
+        case PAUSE:   
+ drawCurrentLayer1(currentLayer); 
+ drawCurrentLayer2(currentLayer); 
+             for(i=1;i<=4;i++) 
+                   WaitFor(100); 
+             if(aimLayer<currentLayer)  
+                  state=DOWN; 
+             if(aimLayer>currentLayer) 
+                  state=UP; 
+             if(aimLayer==0) 
+                state=PAUSE,prestate=PAUSE; 
+             break; 
+     } 
+}  
+
+
+void control(void) 
+{ 
+    int i,mark=0,m=0; 
+        
+    if(flag==1) 
+   	{ 
+       if(state==PAUSE && prestate!=PAUSE) //上行中确定目标楼层
+		{  
+          	Callin[currentLayer]=Callup[currentLayer]=0; 
+          	for(i=currentLayer+1;i<=9;i++) 
+             	if(Callup[i]==1 || Callin[i]==1 || Calldown[i]==1) 
+                	m=1; 
+             	if(m!=1)//无上行需求直接将下行此楼层处理  
+                Calldown[currentLayer]=0; 
+         	} 
+       for(i=currentLayer;i<=9;i++) 
+          if(Callup[i]==1 || Callin[i]==1) 
+		{ 
+            	mark=i; 
+            	aimLayer=i; 
+            	break; 
+        	}//有上行需求 ,目标楼层被确定  
+       if(mark==0)//无上行需求  
+          for(i=9;i>=1;i--) 
+             if(Calldown[i]==1 || Callin[i]==1) 
+		{ 
+                aimLayer=i; 
+                mark=i; 
+                break; 
+             	}//确定下行目标楼层  
+       if(mark==0)  
+          for(i=1;i<=8;i++) 
+             if(Callup[i]==1) 
+		{ 
+                aimLayer=i; 
+                mark=i; 
+                break; 
+             	} 
+       if(mark==0)  
+         aimLayer=0; 
+	}//无目标楼层  
+    else if(flag==-1) 
+	{ 
+         if(state==PAUSE && prestate!=PAUSE) //电梯运行中 
+		{ 
+            	Calldown[currentLayer]=Callin[currentLayer]=0;//此层已处理过  
+            	for(i=currentLayer-1;i>=1;i--) 
+               if(Callup[i]==1 || Callin[i]==1 || Calldown[i]==1) 
+                  m=1; 
+               if(m!=1) 
+                  Callup[currentLayer]=0;//无目标楼层暂时停靠 m??  
+         	} 
+       for(i=currentLayer-1;i>=1;i--) 
+          if(Calldown[i]==1 || Callin[i]==1) 
+	{ 
+            mark=i; 
+            aimLayer=i; 
+            break; 
+          }//确定下行目标楼层  
+           
+          //???为何要向上运行开始呢? 
+            
+       if(mark==0) //顺便无要求,开始新的一楼起的上升需求扫描  
+         for(i=1;i<=9;i++) 
+            if(Callup[i]==1 || Callin[i]==1) 
+	{ 
+               aimLayer=i; 
+               mark=i; 
+               break; 
+            } 
+       if(mark==0)  
+         for(i=9;i>=2;i--) 
+            if(Calldown[i]==1) 
+	{ 
+               aimLayer=i; 
+               mark=i; 
+               break; 
+            } 
+       if(mark==0) 
+         aimLayer=0; 
+    } 
+} 
+
+void control0(void)//yang 
+{ 
+    int i; 
+     
+    for(i=0;i<=N-1;i++) 
+   { 
+       if(Call[i]!=0) 
+	{ 
+          aimLayer=Call[i]; 
+          if(state==PAUSE && prestate!=PAUSE) 
+             Call[i]=0; 
+          break; 
+       } 
+    } 
+} 
+
+        
+void getInput(void) 
+{    
+    char ch; 
+     
+   while(1)
+  {      
+       ch=getchar(); 
+       switch(ch) 
+	{ 
+ 
+	case'I': 
+   		Callup[1]=1; 
+   		break; 
+	case'U': 
+   		Callup[2]=1; 
+   		break; 
+	case'Y': 
+   		Callup[3]=1; 
+   		break; 
+	case'T': 
+  		Callup[4]=1; 
+   		break; 
+	case'R': 
+   		Callup[5]=1; 
+   		break; 
+	case'E': 
+   		Callup[6]=1; 
+   		break; 
+	case'W': 
+      		Callup[7]=1; 
+   		break; 
+	case'Q': 
+   		Callup[8]=1; 
+   		break; 
+     
+	case'K': 
+   		Calldown[2]=1; 
+   		break; 
+	case'J': 
+   		Calldown[3]=1; 
+   		break; 
+	case'H': 
+   		Calldown[4]=1; 
+   		break; 
+	case'G': 
+   		Calldown[5]=1; 
+   		break; 
+	case'F': 
+   		Calldown[6]=1; 
+   		break; 
+	case'D': 
+   		Calldown[7]=1; 
+   		break; 
+	case'S': 
+   		Calldown[8]=1; 
+   		break; 
+	case'A': 
+   		Calldown[9]=1; 
+   		break; 
+
+	case '1':  
+   		Callin[1]=1; 
+   		break; 
+	case '2': 
+   		Callin[2]=1; 
+   		break; 
+	case '3': 
+   		Callin[3]=1; 
+   		break; 
+	case '4': 
+   		Callin[4]=1; 
+   		break; 
+	case '5': 
+   		Callin[5]=1; 
+   		break; 
+	case '6': 
+   		Callin[6]=1; 
+   		break; 
+	case '7': 
+   		Callin[7]=1; 
+   		break; 
+	case '8': 
+   		Callin[8]=1; 
+   		break; 
+	case '9': 
+   		Callin[9]=1; 
+   		break; 
+	} 
+       fflush(stdin);//使回车不被读取 
+    }    
+} 
+
+void getInput0(void)//yangnan 
+{    
+    int i=0; 
+    char ch; 
+     
+   while(1)
+  {      
+       ch=getchar(); 
+       switch(ch) 
+	{ 
+    	case'I': 
+   		Call[i]=1; 
+   		break; 
+	case'U': 
+   		Call[i]=2; 
+   		break; 
+	case'Y': 
+   		Call[i]=3; 
+   		break; 
+	case'T': 
+   		Call[i]=4; 
+   		break; 
+	case'R': 
+   		Call[i]=5; 
+   		break; 
+	case'E': 
+   		Call[i]=6; 
+   		break; 
+	case'W': 
+      		Call[i]=7; 
+   		break; 
+	case'Q': 
+   		Call[i]=8; 
+   		break; 
+     
+	case'K': 
+   		Call[i]=2; 
+   		break; 
+	case'J': 
+   		Call[i]=3; 
+   		break; 
+	case'H': 
+   		Call[i]=4; 
+   		break; 
+	case'G': 
+   		Call[i]=5; 
+   		break; 
+	case'F': 
+   		Call[i]=6; 
+   		break; 
+	case'D': 
+   		Call[i]=7; 
+   		break; 
+	case'S': 
+   		Call[i]=8; 
+   		break; 
+	case'A': 
+   		Call[i]=9; 
+   		break; 
+
+	case '1':  
+   		Call[i]=1; 
+   		break; 
+	case '2': 
+   		Call[i]=2; 
+   		break; 
+	case '3': 
+   		Call[i]=3; 
+   		break; 
+	case '4': 
+   		Call[i]=4; 
+   		break; 
+	case '5': 
+   		Call[i]=5; 
+   		break; 
+	case '6': 
+   		Call[i]=6; 
+   		break; 
+	case '7': 
+   		Call[i]=7; 
+   		break; 
+	case '8': 
+   		Call[i]=8; 
+   		break; 
+	case '9': 
+   		Call[i]=9; 
+   		break; 
+	} 
+	i++; 
+        fflush(stdin);//使回车不被读取 
+   }    
+} 
+
+
+void Uper(void) 
+{ 
+	int step; 
+	for(step=1;step<=20;step++)
+	{  
+       		WaitFor(50);/*等待50毫秒*/ 
+   		move(0.075);  
+    	}   
+} 
+void Downer(void) 
+{ 
+	int step; 
+	for(step=1;step<=20;step++)
+	{  
+       		WaitFor(50);/*等待50毫秒*/ 
+   		move(-0.075);  
+    }   
+}  
+ 
+
+
+
+
+
+但是这个算法可能会有点小问题，你研究一下看看，多多少少有帮助的

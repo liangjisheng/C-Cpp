@@ -1,0 +1,9 @@
+syntax = "proto3";
+package word;
+
+message sendmsg
+{
+    int32 clientid = 1;
+    bytes msg = 2;
+    string ip = 3;
+}

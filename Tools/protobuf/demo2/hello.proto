@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+message helloworld
+{
+    int32 id = 1;
+    string str = 2;
+    int32 opt = 3;
+}

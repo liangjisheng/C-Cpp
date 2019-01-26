@@ -1,2 +1,2 @@
 # C-Cpp
-C/C++学习代码
+C/C++ study codes
